@@ -1,0 +1,47 @@
+{
+  "name": "niko9911/react-http-middleware-session",
+  "description": "Middleware for implementing PHP Sessions in ReactPHP Http Server.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Niko Grano",
+      "email": "niko9911@ironlions.fi",
+      "homepage": "https://xn--gran-8qa.fi",
+      "role": "Maintainer"
+    }
+  ],
+  "scripts": {
+    "cs": "vendor/bin/php-cs-fixer fix -vvvv",
+    "cs:validate": "vendor/bin/php-cs-fixer fix --dry-run -v --show-progress=dots --diff-format=udiff",
+    "test": "vendor/bin/phpunit --configuration phpunit.xml.dist --coverage-text"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Niko9911\\React\\Middleware\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Niko9911\\React\\Middleware\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "hansott/psr7-cookies": "^2.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2"
+  },
+  "archive": {
+    "exclude": [
+      "docs",
+      "build",
+      "node_modules",
+      "*.md", "*.lock", "*.txt", "*.xml", "*.cache", "*.dist", "*.cache",
+      "Makefile", ".textlintrc", ".editorconfig", ".php_cs.dist", ".gitignore"
+    ]
+  }
+}
