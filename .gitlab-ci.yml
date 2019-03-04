@@ -19,23 +19,6 @@ before_script:
   - composer install $DEFAULT_COMPOSER_FLAGS -q > /dev/null
   - composer global show hirak/prestissimo -q || composer global require $DEFAULT_COMPOSER_FLAGS hirak/prestissimo -q
 
-.phpunit:
-  stage: test
-  script:
-    - composer test
-
-php:71:
-  image: php:7.1
-  extends: .phpunit
-
-php:72:
-  image: php:7.2
-  extends: .phpunit
-
-php:73:
-  image: php:7.3
-  extends: .phpunit
-
 cs:71:
   image: php:7.1
   stage: test

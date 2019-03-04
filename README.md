@@ -6,7 +6,7 @@ Middleware for implementing PHP Sessions in ReactPHP Http Server.
 Via [composer](http://getcomposer.org):
 
 ```shell
-composer require niko9911/react-middleware-session
+composer require niko9911/react-http-middleware-session
 ```
 
 ## Usage
